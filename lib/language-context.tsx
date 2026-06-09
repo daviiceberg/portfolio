@@ -12,14 +12,16 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [lang, setLang] = useState<Lang>('en')
 
   useEffect(() => {
-    const saved = localStorage.getItem('lang') as Lang | null
-    if (saved === 'en' || saved === 'pt') setLang(saved)
+    try {
+      const saved = localStorage.getItem('lang') as Lang | null
+      if (saved === 'en' || saved === 'pt') setLang(saved)
+    } catch {}
   }, [])
 
   const toggle = () =>
     setLang(l => {
       const next = l === 'en' ? 'pt' : 'en'
-      localStorage.setItem('lang', next)
+      try { localStorage.setItem('lang', next) } catch {}
       return next
     })
 
