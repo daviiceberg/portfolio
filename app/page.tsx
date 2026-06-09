@@ -398,12 +398,13 @@ function Work({ c }: { c: LocaleContent }) {
           <Reveal key={project.name} delay={idx * 0.06}>
             <article className="group overflow-hidden rounded-2xl border border-ink/[0.08] bg-surface transition hover:border-ink/[0.16]">
               {/* Project header */}
-              <div className="flex flex-col gap-4 border-b border-ink/[0.08] p-6 sm:flex-row sm:items-start sm:justify-between">
-                <div className="flex items-start gap-5">
-                  <span className="shrink-0 font-sans text-xs font-medium text-gold/70 pt-1">
+              <div className="flex items-start justify-between gap-6 border-b border-ink/[0.08] p-6">
+                {/* Left: number + text */}
+                <div className="flex min-w-0 items-start gap-5">
+                  <span className="shrink-0 pt-1 font-sans text-xs font-medium text-gold/70">
                     {project.number}
                   </span>
-                  <div>
+                  <div className="min-w-0">
                     <p className="eyebrow mb-2">{project.category}</p>
                     <h3 className="font-display text-3xl font-semibold text-ink sm:text-4xl">
                       {project.name}
@@ -411,16 +412,35 @@ function Work({ c }: { c: LocaleContent }) {
                     <p className="mt-3 max-w-xl font-sans text-sm leading-relaxed text-muted">
                       {project.description}
                     </p>
+                    {project.link && (
+                      <a
+                        href={project.link}
+                        target={project.link.startsWith('http') ? '_blank' : undefined}
+                        rel={project.link.startsWith('http') ? 'noopener noreferrer' : undefined}
+                        className="focus-ring mt-5 inline-flex items-center gap-1.5 rounded-full bg-gold px-5 py-2.5 text-xs font-medium text-canvas transition hover:bg-gold/90"
+                      >
+                        {project.link.startsWith('/') ? 'View case' : project.link.includes('behance') ? 'View on Behance' : 'View live'}
+                        {project.link.startsWith('/') ? <ArrowRight size={12} /> : <ExternalLink size={12} />}
+                      </a>
+                    )}
                   </div>
                 </div>
-                {project.link && (
+
+                {/* Right: thumbnail */}
+                {project.thumb && (
                   <a
                     href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="focus-ring inline-flex shrink-0 items-center gap-1.5 rounded-full border border-ink/20 px-4 py-2 text-xs font-medium text-muted transition hover:border-gold/50 hover:text-gold"
+                    target={project.link?.startsWith('http') ? '_blank' : undefined}
+                    rel={project.link?.startsWith('http') ? 'noopener noreferrer' : undefined}
+                    className="hidden shrink-0 overflow-hidden rounded-xl border border-ink/[0.08] sm:block sm:w-[19rem]"
                   >
-                    View live <ExternalLink size={12} />
+                    <Image
+                      src={project.thumb}
+                      alt={project.name}
+                      width={640}
+                      height={400}
+                      className="w-full h-auto object-cover transition duration-500 group-hover:scale-[1.02]"
+                    />
                   </a>
                 )}
               </div>

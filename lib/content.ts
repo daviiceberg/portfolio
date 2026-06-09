@@ -41,6 +41,7 @@ export interface LocaleContent {
       outcomes: { label: string; items: string[] }
       tech: string[]
       link?: string
+      thumb?: string
     }[]
   }
   workflow: {
@@ -156,7 +157,8 @@ const en: LocaleContent = {
           ],
         },
         tech: ['Claude Code', 'Figma Make', 'Figma MCP', 'Obsidian', 'UX Research', 'Healthcare'],
-        link: 'https://arvo-auth-m7.vercel.app/dashboard',
+        link: '/cases/arvo',
+        thumb: '/cases/arvo/thumb.png',
       },
       {
         number: '02',
@@ -181,6 +183,7 @@ const en: LocaleContent = {
         },
         tech: ['Flutter', 'Material Design', 'Mobile UX', 'SaaS', 'User Research'],
         link: 'https://www.behance.net/gallery/250115621/Boxler-APP',
+        thumb: '/cases/boxler.png',
       },
       {
         number: '03',
@@ -205,6 +208,7 @@ const en: LocaleContent = {
         },
         tech: ['Brand System', 'Product Design', 'Healthcare', 'Scientific UX', 'Content Strategy'],
         link: 'https://www.behance.net/gallery/237818017/Exon-Genomics',
+        thumb: '/cases/exon.png',
       },
     ],
   },
@@ -365,7 +369,8 @@ const pt: LocaleContent = {
           ],
         },
         tech: ['Claude Code', 'Figma Make', 'Figma MCP', 'Obsidian', 'UX Research', 'Healthtech'],
-        link: 'https://arvo-auth-m7.vercel.app/dashboard',
+        link: '/cases/arvo',
+        thumb: '/cases/arvo/thumb.png',
       },
       {
         number: '02',
@@ -390,6 +395,7 @@ const pt: LocaleContent = {
         },
         tech: ['Flutter', 'Material Design', 'Mobile UX', 'SaaS', 'Pesquisa de Usuário'],
         link: 'https://www.behance.net/gallery/250115621/Boxler-APP',
+        thumb: '/cases/boxler.png',
       },
       {
         number: '03',
@@ -414,6 +420,7 @@ const pt: LocaleContent = {
         },
         tech: ['Brand System', 'Product Design', 'Healthtech', 'Scientific UX', 'Estratégia de Conteúdo'],
         link: 'https://www.behance.net/gallery/237818017/Exon-Genomics',
+        thumb: '/cases/exon.png',
       },
     ],
   },
