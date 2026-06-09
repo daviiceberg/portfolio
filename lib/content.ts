@@ -84,7 +84,7 @@ const en: LocaleContent = {
       { label: 'Experience', href: '#experience' },
       { label: 'Contact', href: '#contact' },
     ],
-    cta: "Let's talk",
+    cta: "Let's Talk",
   },
   hero: {
     eyebrow: 'Senior Product Designer · AI-Driven Product Builder',
@@ -104,8 +104,8 @@ const en: LocaleContent = {
     eyebrow: 'About',
     heading: 'From UX/UI delivery to AI-assisted product systems.',
     body: [
-      'More than a decade of work has shaped a design practice that operates at the intersection of user research, product strategy, and technical execution — now accelerated by AI tools and agent-based systems.',
-      'Davi helps teams translate ambiguous business problems into clear product direction, then uses Claude Code, LLM workflows, and structured knowledge systems to compress research, ideation, and implementation cycles — moving faster without losing depth.',
+      "I've spent over a decade building a design practice at the intersection of user research, product strategy, and technical execution — now accelerated by AI tools and agent-based systems.",
+      'I help teams translate ambiguous business problems into clear product direction, using Claude Code, LLM workflows, and structured knowledge systems to compress research, ideation, and implementation cycles — moving faster without losing depth.',
     ],
   },
   expertise: {
@@ -156,7 +156,7 @@ const en: LocaleContent = {
             'Discovery cycles compressed through AI-assisted research synthesis',
           ],
         },
-        tech: ['Claude Code', 'Figma Make', 'Figma MCP', 'Obsidian', 'UX Research', 'Healthcare'],
+        tech: ['Claude Code', 'Figma Make', 'Figma MCP', 'Obsidian', 'UX Research', 'Healthtech'],
         link: '/cases/arvo',
         thumb: '/cases/arvo/thumb.webp',
       },
@@ -167,7 +167,7 @@ const en: LocaleContent = {
         description: 'An end-to-end mobile product for inventory management and relocation coordination, designed to support operational teams through structured field workflows.',
         challenge: {
           label: 'Challenge',
-          text: 'The product needed to make inventory tracking and move coordination intuitive and usable in fast-moving, mobile-first operational contexts.',
+          text: 'The product needed to make inventory tracking and relocation coordination intuitive and usable in fast-moving, mobile-first operational contexts.',
         },
         solution: {
           label: 'Solution',
@@ -177,7 +177,7 @@ const en: LocaleContent = {
           label: 'Outcomes',
           items: [
             'Complete mobile product design from discovery to MVP launch',
-            'Operationally focused inventory and relocation management flows',
+            'Operationally focused inventory and relocation coordination flows',
             'Implementation-ready UI patterns aligned to Flutter development',
           ],
         },
@@ -187,9 +187,9 @@ const en: LocaleContent = {
       },
       {
         number: '03',
-        category: 'Healthtech Brand & Product Platform',
+        category: 'Healthtech Brand & Product',
         name: 'Exon Genomics',
-        description: 'A genomics-focused healthtech presence balancing scientific credibility, product clarity, and accessible healthcare communication across digital and offline touchpoints.',
+        description: 'A genomics-focused healthtech presence balancing scientific credibility, product clarity, and accessible healthcare communication across digital and print touchpoints.',
         challenge: {
           label: 'Challenge',
           text: 'The company needed a digital identity and platform experience that could translate complex genomics into a trustworthy, comprehensible product story for healthcare audiences.',
@@ -206,7 +206,7 @@ const en: LocaleContent = {
             'Healthtech-ready visual system for digital and print materials',
           ],
         },
-        tech: ['Brand System', 'Product Design', 'Healthcare', 'Scientific UX', 'Content Strategy'],
+        tech: ['Brand System', 'Product Design', 'Healthtech', 'Scientific UX', 'Content Strategy'],
         link: 'https://www.behance.net/gallery/237818017/Exon-Genomics',
         thumb: '/cases/exon.webp',
       },
@@ -219,7 +219,7 @@ const en: LocaleContent = {
     steps: [
       { number: '01', title: 'Research', text: 'Market context, user signals, operational dynamics, and business constraints gathered through structured, intentional inquiry.' },
       { number: '02', title: 'Discovery', text: 'Problem framing, opportunity mapping, constraints, and product direction crystallized through deep stakeholder collaboration.' },
-      { number: '03', title: 'AI Exploration', text: 'LLMs used to expand options, synthesize research signals, and generate and stress-test product assumptions at speed.' },
+      { number: '03', title: 'AI Exploration', text: 'LLMs used to expand options, synthesize research signals, generate and stress-test product assumptions at speed.' },
       { number: '04', title: 'Functional Prototype', text: 'Real interactions and realistic flows built with Claude Code and Figma Make — far beyond static wireframes or mockups.' },
       { number: '05', title: 'Validation', text: 'Stakeholder, user, and implementation feedback used to sharpen direction and eliminate risk before delivery begins.' },
       { number: '06', title: 'Implementation', text: 'Deep engineering collaboration through specs, design systems, and frontend-aware decisions that reduce handoff friction.' },
@@ -235,7 +235,7 @@ const en: LocaleContent = {
         company: 'Arvo Saúde',
         role: 'Senior Product Designer / Product Engineer',
         period: 'Feb 2026 – Jun 2026 · São Paulo, Brazil (Remote)',
-        detail: "Led discovery for a healthcare authorization platform serving Brazil's supplemental health sector. Delivered functional prototypes via Claude Code used directly by engineering, and built an Obsidian second-brain vault adopted company-wide as product reference.",
+        detail: "Led discovery for a healthcare authorization platform serving Brazil's supplemental health sector. Delivered functional prototypes via Claude Code used directly by engineering, and built an Obsidian second-brain vault adopted company-wide as product and operational reference.",
       },
       {
         company: 'Ensitech / Boxler',
@@ -257,13 +257,13 @@ const en: LocaleContent = {
       },
       {
         company: 'Exon Genomics',
-        role: 'Product Designer / Creative Director / Social Media',
+        role: 'Product Designer / Art Director / Social Media',
         period: 'Nov 2023 – Aug 2024 · São Paulo, Brazil (Remote)',
-        detail: 'Led product design from ideation to MVP delivery. Improved team collaboration and design consistency across projects. Designed visual materials ensuring brand coherence across digital and offline touchpoints.',
+        detail: 'Led product design from ideation to MVP delivery. Improved team collaboration and design consistency across projects. Designed visual materials ensuring brand coherence across digital and print touchpoints.',
       },
       {
         company: 'Mira Próponto',
-        role: 'UX/UI Designer / Creative Director',
+        role: 'UX/UI Designer / Art Director',
         period: 'Jun 2018 – Mar 2023 · São Paulo, Brazil (Remote)',
         detail: "Implemented UX methodologies and prototyping culture driving agency growth and new client acquisition. Delivered web and mobile applications for Unilever, Nivea, L'Oréal, Heineken, Kibon, Havaianas, Stanley, and other global brands. Mentored junior designers.",
       },
@@ -299,11 +299,11 @@ const pt: LocaleContent = {
     cta: 'Vamos conversar',
   },
   hero: {
-    eyebrow: 'Designer de Produto Sênior · Criação de Produtos com IA',
+    eyebrow: 'Senior Product Designer · AI-Driven Product Builder',
     tagline: 'Criando produtos onde UX, estratégia e inteligência convergem.',
     subtitle: 'Mais de 10 anos transformando desafios complexos em experiências digitais escaláveis — agora acelerados por workflows com IA e sistemas baseados em agentes.',
-    cta1: 'Ver Projetos',
-    cta2: 'Vamos Conversar',
+    cta1: 'Ver projetos',
+    cta2: 'Vamos conversar',
   },
   metrics: [
     '10+ anos de experiência',
@@ -316,8 +316,8 @@ const pt: LocaleContent = {
     eyebrow: 'Sobre',
     heading: 'De entrega UX/UI a sistemas de produto com IA.',
     body: [
-      'Mais de uma década de trabalho moldou uma prática de design que opera na interseção de pesquisa de usuários, estratégia de produto e execução técnica — agora acelerada por ferramentas de IA e sistemas baseados em agentes.',
-      'Davi ajuda times a transformar problemas de negócio ambíguos em direção de produto clara, usando Claude Code, workflows com LLMs e sistemas de conhecimento estruturado para comprimir ciclos de pesquisa, ideação e implementação — sem perder profundidade.',
+      'Ao longo de mais de uma década, construí uma prática de design na interseção de pesquisa de usuários, estratégia de produto e execução técnica — agora acelerada por ferramentas de IA e sistemas baseados em agentes.',
+      'Ajudo times a transformar problemas de negócio ambíguos em direção de produto clara, usando Claude Code, workflows com LLMs e sistemas de conhecimento estruturado para comprimir ciclos de pesquisa, ideação e implementação — sem perder profundidade.',
     ],
   },
   expertise: {
@@ -401,7 +401,7 @@ const pt: LocaleContent = {
         number: '03',
         category: 'Marca Healthtech & Produto',
         name: 'Exon Genomics',
-        description: 'Uma presença digital healthtech focada em genômica, equilibrando credibilidade científica, clareza de produto e comunicação de saúde acessível em todos os touchpoints.',
+        description: 'Uma presença healthtech focada em genômica, equilibrando credibilidade científica, clareza de produto e comunicação de saúde acessível em todos os touchpoints digitais e impressos.',
         challenge: {
           label: 'Desafio',
           text: 'A empresa precisava de uma identidade digital e experiência de plataforma capazes de traduzir genômica complexa em uma história de produto confiável e compreensível.',
@@ -431,9 +431,9 @@ const pt: LocaleContent = {
     steps: [
       { number: '01', title: 'Pesquisa', text: 'Contexto de mercado, sinais de usuário, dinâmicas operacionais e restrições de negócio coletados com investigação estruturada e intencional.' },
       { number: '02', title: 'Discovery', text: 'Framing do problema, mapeamento de oportunidades, restrições e direção de produto cristalizados através de colaboração com stakeholders.' },
-      { number: '03', title: 'Exploração com IA', text: 'LLMs usados para expandir opções, sintetizar sinais de pesquisa e gerar e stress-testar premissas de produto em velocidade.' },
+      { number: '03', title: 'Exploração com IA', text: 'LLMs usados para expandir opções, sintetizar sinais de pesquisa, gerar e stress-testar premissas de produto em velocidade.' },
       { number: '04', title: 'Protótipo Funcional', text: 'Interações reais e fluxos realistas construídos com Claude Code e Figma Make — muito além de wireframes ou mockups estáticos.' },
-      { number: '05', title: 'Validação', text: 'Feedback de stakeholders, usuários e implementação usado para afiar a direção e eliminar riscos antes que a entrega comece.' },
+      { number: '05', title: 'Validação', text: 'Feedback de stakeholders, usuários e implementação usado para refinar a direção e eliminar riscos antes que a entrega comece.' },
       { number: '06', title: 'Implementação', text: 'Colaboração profunda com engenharia através de specs, design systems e decisões com consciência de frontend que reduzem fricção de handoff.' },
     ],
     toolsLabel: 'Ferramentas & Sistemas',
@@ -445,25 +445,25 @@ const pt: LocaleContent = {
     items: [
       {
         company: 'Arvo Saúde',
-        role: 'Designer de Produto Sênior / Product Engineer',
+        role: 'Senior Product Designer / Product Engineer',
         period: 'Fev 2026 – Jun 2026 · São Paulo, Brasil (Remoto)',
         detail: 'Liderei discovery para uma plataforma de autorização médica no setor de saúde suplementar brasileiro. Entreguei protótipos funcionais via Claude Code usados diretamente pela engenharia, e construí um vault Obsidian de second brain adotado em toda a empresa.',
       },
       {
         company: 'Ensitech / Boxler',
-        role: 'Designer de Produto Sênior / UX/UI Designer',
+        role: 'Senior Product Designer / UX/UI Designer',
         period: 'Out 2025 – Fev 2026 · Austin, Texas, EUA (Remoto)',
         detail: 'Liderei o design end-to-end do aplicativo mobile Boxler: conceito, discovery, definição de MVP, prototipação e lançamento. Conduzi entrevistas com usuários, testes de usabilidade e colaborei com desenvolvedores Flutter para entregar um produto escalável de gestão de inventário.',
       },
       {
         company: 'RioSlum Studio',
-        role: 'Designer de Produto Sênior / UX/UI Designer',
+        role: 'Senior Product Designer / UX/UI Designer',
         period: 'Set 2024 – Ago 2025 · Philadelphia, EUA (Remoto)',
         detail: 'Redesenhei a navegação principal do produto, reduzindo erros de usabilidade em 30% e melhorando a taxa de conclusão de tarefas. Desenvolvi design systems e protótipos interativos para clientes de alto perfil. Estruturei documentação e guias de handoff para engenharia e marketing.',
       },
       {
         company: 'Roda Trade',
-        role: 'Designer de Produto Sênior / UX/UI Designer',
+        role: 'Senior Product Designer / UX/UI Designer',
         period: 'Mar 2023 – Set 2024 · São Paulo, Brasil (Remoto)',
         detail: 'Projetei e lancei plataformas SaaS de promoção e incentivo alcançando +25% de crescimento de engajamento em menos de seis meses. Liderei iniciativas de UX/UI conquistando concorrências para P&G, Vibra, Mary Kay, Sanofi e Gillette.',
       },
@@ -484,7 +484,7 @@ const pt: LocaleContent = {
   contact: {
     eyebrow: 'Contato',
     heading: ['VAMOS CRIAR', 'ALGO', 'SIGNIFICATIVO.'],
-    subtitle: 'Disponível para cargos sênior de design de produto, trabalho em design de produto com IA, consultoria e oportunidades remotas internacionais.',
+    subtitle: 'Disponível para posições de Senior Product Designer, projetos de AI product design, consultoria e oportunidades remotas internacionais.',
     availability: 'Disponível agora',
     cvLabel: 'Baixar Currículo',
     cvLink: 'https://drive.google.com/file/d/1FRJeut2WR2shWxPQ5dQzpjQzwpvKUs_M/view?usp=drive_link',
@@ -495,7 +495,7 @@ const pt: LocaleContent = {
       { label: '+55 21 98875-0605', href: 'tel:+5521988750605' },
     ],
   },
-  footer: { copy: '© 2026 Davi Rojtenberg · Designer de Produto Sênior' },
+  footer: { copy: '© 2026 Davi Rojtenberg · Senior Product Designer' },
 }
 
 export const content: Record<Lang, LocaleContent> = { en, pt }
