@@ -17,6 +17,7 @@ type Step = {
   body: string[]
   images: { src: string; alt: string }[]
   twoCol?: boolean
+  threeCol?: boolean
 }
 
 type CaseContent = {
@@ -77,8 +78,9 @@ const content: Record<Lang, CaseContent> = {
         images: [
           { src: '/cases/arvo/insights1.webp', alt: 'Insight synthesis and affinity mapping' },
           { src: '/cases/arvo/insights2.webp', alt: 'Benchmark findings and design principles' },
+          { src: '/cases/arvo/obsidian.webp', alt: 'Obsidian knowledge graph — second brain built for the project' },
         ],
-        twoCol: true,
+        threeCol: true,
       },
       {
         number: '03',
@@ -186,8 +188,9 @@ const content: Record<Lang, CaseContent> = {
         images: [
           { src: '/cases/arvo/insights1.webp', alt: 'Síntese de insights e mapeamento por afinidade' },
           { src: '/cases/arvo/insights2.webp', alt: 'Resultados do benchmark e princípios de design' },
+          { src: '/cases/arvo/obsidian.webp', alt: 'Grafo de conhecimento do Obsidian — second brain construído para o projeto' },
         ],
-        twoCol: true,
+        threeCol: true,
       },
       {
         number: '03',
@@ -396,7 +399,24 @@ function Process({ c }: { c: CaseContent }) {
           </div>
 
           <Reveal delay={0.14}>
-            {step.twoCol ? (
+            {step.threeCol ? (
+              <div className="section-shell grid gap-4 sm:grid-cols-3">
+                {step.images.map((img) => (
+                  <div key={img.src} className="overflow-hidden rounded-xl border border-ink/[0.08] bg-surface">
+                    <Image
+                      src={img.src}
+                      alt={img.alt}
+                      width={800}
+                      height={600}
+                      sizes="(max-width: 640px) calc(100vw - 40px), (max-width: 1280px) calc(33vw - 48px), 380px"
+                      quality={75}
+                      loading="lazy"
+                      className="w-full h-auto"
+                    />
+                  </div>
+                ))}
+              </div>
+            ) : step.twoCol ? (
               <div className="section-shell grid gap-4 sm:grid-cols-2">
                 {step.images.map((img) => (
                   <div key={img.src} className="overflow-hidden rounded-xl border border-ink/[0.08] bg-surface">
