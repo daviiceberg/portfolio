@@ -393,7 +393,7 @@ function Work({ c }: { c: LocaleContent }) {
         </p>
       </Reveal>
 
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-8">
         {c.work.projects.map((project, idx) => (
           <Reveal key={project.name} delay={idx * 0.06}>
             <article className="group overflow-hidden rounded-2xl border border-ink/[0.08] bg-surface transition hover:border-ink/[0.16]">
