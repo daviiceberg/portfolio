@@ -31,6 +31,7 @@ export interface LocaleContent {
     eyebrow: string
     heading: string
     subtitle: string
+    behanceCta: string
     projects: {
       number: string
       category: string
@@ -133,6 +134,7 @@ const en: LocaleContent = {
     eyebrow: 'Selected Work',
     heading: 'Case studies shaped around business complexity.',
     subtitle: 'Projects across healthtech, SaaS, and digital product systems — built with discovery, strategy, and AI-assisted delivery.',
+    behanceCta: 'More projects on Behance',
     projects: [
       {
         number: '01',
@@ -345,6 +347,7 @@ const pt: LocaleContent = {
     eyebrow: 'Projetos Selecionados',
     heading: 'Estudos de caso moldados pela complexidade do negócio.',
     subtitle: 'Projetos em healthtech, SaaS e sistemas de produto digital — com discovery, estratégia e entrega assistida por IA.',
+    behanceCta: 'Mais projetos no Behance',
     projects: [
       {
         number: '01',
