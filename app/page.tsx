@@ -171,7 +171,7 @@ function MobileMenu({
 
 function Hero({ c }: { c: LocaleContent }) {
   return (
-    <section id="top" className="relative min-h-svh pt-16">
+    <section id="top" className="relative pt-16" style={{ minHeight: '100dvh' }}>
       {/* Warm radial gradient, very subtle */}
       <div
         className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[640px]"
@@ -181,7 +181,7 @@ function Hero({ c }: { c: LocaleContent }) {
         }}
       />
 
-      <div className="section-shell grid min-h-[calc(100svh-4rem)] items-center gap-8 py-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
+      <div className="section-shell grid items-center gap-8 py-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16" style={{ minHeight: 'calc(100dvh - 4rem)' }}>
 
         {/* Left: text content */}
         <div className="flex flex-col justify-center">
@@ -263,7 +263,7 @@ function Hero({ c }: { c: LocaleContent }) {
         >
           <div className="relative aspect-[3/4] w-full max-w-[340px] overflow-hidden rounded-[2rem] border border-gold/[0.14]">
             <Image
-              src="/davi.png"
+              src="/davi.webp"
               alt="Davi Rojtenberg"
               fill
               sizes="340px"
@@ -439,6 +439,9 @@ function Work({ c }: { c: LocaleContent }) {
                       alt={project.name}
                       width={640}
                       height={400}
+                      sizes="19rem"
+                      quality={75}
+                      loading="lazy"
                       className="w-full h-auto object-cover transition duration-500 group-hover:scale-[1.02]"
                     />
                   </a>

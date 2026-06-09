@@ -158,7 +158,7 @@ const en: LocaleContent = {
         },
         tech: ['Claude Code', 'Figma Make', 'Figma MCP', 'Obsidian', 'UX Research', 'Healthcare'],
         link: '/cases/arvo',
-        thumb: '/cases/arvo/thumb.png',
+        thumb: '/cases/arvo/thumb.webp',
       },
       {
         number: '02',
@@ -183,7 +183,7 @@ const en: LocaleContent = {
         },
         tech: ['Flutter', 'Material Design', 'Mobile UX', 'SaaS', 'User Research'],
         link: 'https://www.behance.net/gallery/250115621/Boxler-APP',
-        thumb: '/cases/boxler.png',
+        thumb: '/cases/boxler.webp',
       },
       {
         number: '03',
@@ -208,7 +208,7 @@ const en: LocaleContent = {
         },
         tech: ['Brand System', 'Product Design', 'Healthcare', 'Scientific UX', 'Content Strategy'],
         link: 'https://www.behance.net/gallery/237818017/Exon-Genomics',
-        thumb: '/cases/exon.png',
+        thumb: '/cases/exon.webp',
       },
     ],
   },
@@ -370,7 +370,7 @@ const pt: LocaleContent = {
         },
         tech: ['Claude Code', 'Figma Make', 'Figma MCP', 'Obsidian', 'UX Research', 'Healthtech'],
         link: '/cases/arvo',
-        thumb: '/cases/arvo/thumb.png',
+        thumb: '/cases/arvo/thumb.webp',
       },
       {
         number: '02',
@@ -395,7 +395,7 @@ const pt: LocaleContent = {
         },
         tech: ['Flutter', 'Material Design', 'Mobile UX', 'SaaS', 'Pesquisa de Usuário'],
         link: 'https://www.behance.net/gallery/250115621/Boxler-APP',
-        thumb: '/cases/boxler.png',
+        thumb: '/cases/boxler.webp',
       },
       {
         number: '03',
@@ -420,7 +420,7 @@ const pt: LocaleContent = {
         },
         tech: ['Brand System', 'Product Design', 'Healthtech', 'Scientific UX', 'Estratégia de Conteúdo'],
         link: 'https://www.behance.net/gallery/237818017/Exon-Genomics',
-        thumb: '/cases/exon.png',
+        thumb: '/cases/exon.webp',
       },
     ],
   },

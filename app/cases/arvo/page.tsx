@@ -5,6 +5,7 @@ import { ArrowLeft, ExternalLink } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Reveal } from '@/components/reveal'
+import { ErrorBoundary } from '@/components/error-boundary'
 import { useLang, type Lang } from '@/lib/language-context'
 
 /* ─── Content ─────────────────────────────────────────────────────────────── */
@@ -63,7 +64,7 @@ const content: Record<Lang, CaseContent> = {
           'The process began with deep qualitative research — extensive interviews with nurse auditors across multiple supplemental health operators. The goal was to map the real mechanics of authorization: how decisions are made, what signals guide approval or denial, where friction accumulates, and what operational knowledge lives only in the heads of experienced auditors.',
           'Beyond workflow mapping, we surfaced specialization patterns, tool frustrations, regulatory pressure points, and the improvised compensatory behaviors that teams had developed to cope with inadequate systems. These conversations became the foundation for everything that followed.',
         ],
-        images: [{ src: '/cases/arvo/discovery.png', alt: 'Discovery research sessions with nurse auditors' }],
+        images: [{ src: '/cases/arvo/discovery.webp', alt: 'Discovery research sessions with nurse auditors' }],
       },
       {
         number: '02',
@@ -74,8 +75,8 @@ const content: Record<Lang, CaseContent> = {
           'The benchmark surfaced critical design principles: how triage logic should be visualized, how AI-generated insights should be positioned relative to human judgment, what regulatory constraints shape the interface, and how to balance speed with clinical rigor. The result was a set of insight clusters that directly informed architecture and feature prioritization.',
         ],
         images: [
-          { src: '/cases/arvo/insights1.png', alt: 'Insight synthesis and affinity mapping' },
-          { src: '/cases/arvo/insights2.png', alt: 'Benchmark findings and design principles' },
+          { src: '/cases/arvo/insights1.webp', alt: 'Insight synthesis and affinity mapping' },
+          { src: '/cases/arvo/insights2.webp', alt: 'Benchmark findings and design principles' },
         ],
         twoCol: true,
       },
@@ -87,7 +88,7 @@ const content: Record<Lang, CaseContent> = {
           'Authorization is not a single flow — it is a constellation of interdependent actors making sequential decisions under time and regulatory pressure. We defined three primary flow systems: the provider-side submission flow (hospitals and clinics entering requests), the operator-side authorization flow (auditors triaging, analyzing, and deciding), and the medical committee escalation flow (bidirectional communication for cases requiring specialist review).',
           'Each flow was designed to hand off cleanly to the next, preserving context and reducing re-entry of information. The flows also established the data model requirements, surfacing which fields were critical at each decision point and where AI-assisted pre-processing could reduce cognitive load on auditors.',
         ],
-        images: [{ src: '/cases/arvo/fluxos.png', alt: 'User flows for provider submission, auditor authorization, and medical committee escalation' }],
+        images: [{ src: '/cases/arvo/fluxos.webp', alt: 'User flows for provider submission, auditor authorization, and medical committee escalation' }],
       },
       {
         number: '04',
@@ -97,7 +98,7 @@ const content: Record<Lang, CaseContent> = {
           'Given the compressed timeline and technical complexity, we made a deliberate strategic choice: bypass static Figma prototypes and build a functional frontend directly. Using Claude Code as the primary development accelerator, we moved from flow definitions to interactive HTML/React components in hours, not weeks.',
           'The engineering team specified React with Next.js and MUI as the component foundation — enabling rapid structural scaffolding with production-quality accessibility and design system coverage out of the box. The resulting design system documentation in MUI became a living reference that both design and engineering could iterate against simultaneously.',
         ],
-        images: [{ src: '/cases/arvo/ds.png', alt: 'Design system foundations built with MUI and React' }],
+        images: [{ src: '/cases/arvo/ds.webp', alt: 'Design system foundations built with MUI and React' }],
       },
       {
         number: '05',
@@ -107,7 +108,7 @@ const content: Record<Lang, CaseContent> = {
           'A formal PRD was developed to align stakeholders on priorities before screen-level work began. The first and most strategic screen was the Dashboard — the macro view that gives operations managers and senior auditors visibility into the full authorization pipeline at a glance.',
           'The dashboard surfaces real-time volumes, AI processing status, pending escalations, and team workload distribution. OCR agents and custom-built document readers process incoming requests automatically, extracting structured clinical data before a human ever touches the case. The dashboard makes this invisible work visible — translating AI throughput into operational intelligence.',
         ],
-        images: [{ src: '/cases/arvo/dashboard.png', alt: 'Operations dashboard showing AI processing pipeline and authorization volume' }],
+        images: [{ src: '/cases/arvo/dashboard.webp', alt: 'Operations dashboard showing AI processing pipeline and authorization volume' }],
       },
       {
         number: '06',
@@ -117,7 +118,7 @@ const content: Record<Lang, CaseContent> = {
           'The operational queue is where the majority of auditor time is spent. Every design decision here was made with speed and accuracy in mind — not as competing priorities, but as complementary outcomes of good information architecture.',
           'Cases are surfaced with just enough context to enable triage without opening the full record: procedure code, beneficiary status, urgency flag, AI recommendation signal, and elapsed time. A rich filter and sort system allows auditors to self-organize their queue by specialization, urgency, or protocol type. The queue was designed to reduce decision fatigue by eliminating noise and surfacing signal.',
         ],
-        images: [{ src: '/cases/arvo/fila-operacional.png', alt: 'Operational queue with filters, priority signals, and AI recommendations' }],
+        images: [{ src: '/cases/arvo/fila-operacional.webp', alt: 'Operational queue with filters, priority signals, and AI recommendations' }],
       },
       {
         number: '07',
@@ -127,7 +128,7 @@ const content: Record<Lang, CaseContent> = {
           'The request analysis screen is the heart of the product. It consolidates the full dossier for a given authorization request: beneficiary profile and medical history, procedure codes, attached clinical documents, referring provider context, and regulatory classification.',
           "A dedicated AI insights panel surfaces the platform's analysis — contraindications, protocol alignment, historical patterns, and risk flags — presented as decision support rather than directives. The final decision panel gives auditors four clear pathways: approve, deny, pend (request more information from the provider), or escalate to a medical committee. Every action is logged with context for regulatory audit trails.",
         ],
-        images: [{ src: '/cases/arvo/tela-de-pedido.png', alt: 'Request analysis screen with AI insights panel and decision controls' }],
+        images: [{ src: '/cases/arvo/tela-de-pedido.webp', alt: 'Request analysis screen with AI insights panel and decision controls' }],
       },
       {
         number: '08',
@@ -137,7 +138,7 @@ const content: Record<Lang, CaseContent> = {
           'A significant source of authorization delays is incomplete or incorrect submissions from providers. The submission wizard was designed to solve this upstream — guiding hospital and clinic staff through a structured, validated entry process that ensures all required fields are populated before the request enters the authorization queue.',
           'The wizard supports document upload and OCR-assisted pre-population, reducing manual data entry while surfacing validation errors in context. By improving data quality at the point of entry, the wizard directly reduces the volume of pend actions required by auditors and compresses overall authorization cycle time.',
         ],
-        images: [{ src: '/cases/arvo/wizard.png', alt: 'Request submission wizard with guided steps and document upload' }],
+        images: [{ src: '/cases/arvo/wizard.webp', alt: 'Request submission wizard with guided steps and document upload' }],
       },
     ],
   },
@@ -172,7 +173,7 @@ const content: Record<Lang, CaseContent> = {
           'O processo começou com pesquisa qualitativa profunda — entrevistas extensas com enfermeiras auditoras de diversas operadoras de saúde suplementar. O objetivo era mapear a mecânica real da autorização: como as decisões são tomadas, quais sinais guiam aprovação ou negativa, onde o atrito se acumula e qual conhecimento operacional vive apenas na cabeça de auditores experientes.',
           'Além do mapeamento de fluxos, identificamos padrões de especialização, frustrações com ferramentas, pontos de pressão regulatória e os comportamentos compensatórios improvisados que as equipes desenvolveram para lidar com sistemas inadequados. Essas conversas tornaram-se a base de tudo que veio depois.',
         ],
-        images: [{ src: '/cases/arvo/discovery.png', alt: 'Sessões de pesquisa de discovery com enfermeiras auditoras' }],
+        images: [{ src: '/cases/arvo/discovery.webp', alt: 'Sessões de pesquisa de discovery com enfermeiras auditoras' }],
       },
       {
         number: '02',
@@ -183,8 +184,8 @@ const content: Record<Lang, CaseContent> = {
           'O benchmark revelou princípios de design críticos: como a lógica de triagem deve ser visualizada, como insights gerados por IA devem ser posicionados em relação ao julgamento humano, quais restrições regulatórias moldam a interface e como equilibrar velocidade com rigor clínico. O resultado foi um conjunto de clusters de insights que informou diretamente a arquitetura e a priorização de funcionalidades.',
         ],
         images: [
-          { src: '/cases/arvo/insights1.png', alt: 'Síntese de insights e mapeamento por afinidade' },
-          { src: '/cases/arvo/insights2.png', alt: 'Resultados do benchmark e princípios de design' },
+          { src: '/cases/arvo/insights1.webp', alt: 'Síntese de insights e mapeamento por afinidade' },
+          { src: '/cases/arvo/insights2.webp', alt: 'Resultados do benchmark e princípios de design' },
         ],
         twoCol: true,
       },
@@ -196,7 +197,7 @@ const content: Record<Lang, CaseContent> = {
           'A autorização não é um fluxo único — é uma constelação de atores interdependentes tomando decisões sequenciais sob pressão de tempo e regulação. Definimos três sistemas de fluxo principais: o fluxo de submissão pelos prestadores (hospitais e clínicas enviando pedidos), o fluxo de autorização pelos operadores (auditores triando, analisando e decidindo) e o fluxo de escalada para junta médica (comunicação bidirecional para casos que exigem avaliação especializada).',
           'Cada fluxo foi projetado para transferir contexto limpo ao próximo, preservando informações e reduzindo reentrada de dados. Os fluxos também estabeleceram os requisitos do modelo de dados, evidenciando quais campos eram críticos em cada ponto de decisão e onde o pré-processamento com IA podia reduzir a carga cognitiva dos auditores.',
         ],
-        images: [{ src: '/cases/arvo/fluxos.png', alt: 'Fluxos de usuário para submissão do prestador, autorização do auditor e escalada para junta médica' }],
+        images: [{ src: '/cases/arvo/fluxos.webp', alt: 'Fluxos de usuário para submissão do prestador, autorização do auditor e escalada para junta médica' }],
       },
       {
         number: '04',
@@ -206,7 +207,7 @@ const content: Record<Lang, CaseContent> = {
           'Dado o prazo comprimido e a complexidade técnica, fizemos uma escolha estratégica deliberada: substituir protótipos estáticos no Figma pela construção direta de um frontend funcional. Usando o Claude Code como acelerador principal de desenvolvimento, passamos de definições de fluxo para componentes HTML/React interativos em horas, não semanas.',
           'O time de engenharia especificou React com Next.js e MUI como base de componentes — permitindo scaffolding estrutural rápido com acessibilidade de qualidade de produção e cobertura de design system prontos para uso. A documentação do design system resultante no MUI tornou-se uma referência viva que design e engenharia podiam iterar simultaneamente.',
         ],
-        images: [{ src: '/cases/arvo/ds.png', alt: 'Fundações do design system construído com MUI e React' }],
+        images: [{ src: '/cases/arvo/ds.webp', alt: 'Fundações do design system construído com MUI e React' }],
       },
       {
         number: '05',
@@ -216,7 +217,7 @@ const content: Record<Lang, CaseContent> = {
           'Um PRD formal foi desenvolvido para alinhar stakeholders nas prioridades antes de iniciar o trabalho em nível de tela. A primeira e mais estratégica tela foi o Dashboard — a visão macro que dá a gestores de operações e auditores sênior visibilidade sobre todo o pipeline de autorizações de relance.',
           'O dashboard apresenta volumes em tempo real, status de processamento da IA, escaladas pendentes e distribuição de carga entre a equipe. Agentes OCR e leitores de documentos desenvolvidos sob medida processam pedidos automaticamente, extraindo dados clínicos estruturados antes de qualquer interação humana. O dashboard torna esse trabalho invisível visível — traduzindo throughput de IA em inteligência operacional.',
         ],
-        images: [{ src: '/cases/arvo/dashboard.png', alt: 'Dashboard operacional mostrando o pipeline de processamento de IA e volume de autorizações' }],
+        images: [{ src: '/cases/arvo/dashboard.webp', alt: 'Dashboard operacional mostrando o pipeline de processamento de IA e volume de autorizações' }],
       },
       {
         number: '06',
@@ -226,7 +227,7 @@ const content: Record<Lang, CaseContent> = {
           'A fila operacional é onde a maior parte do tempo do auditor é gasta. Cada decisão de design aqui foi tomada com velocidade e precisão em mente — não como prioridades concorrentes, mas como resultados complementares de uma boa arquitetura de informação.',
           'Os casos são apresentados com contexto suficiente para permitir triagem sem abrir o registro completo: código de procedimento, status do beneficiário, flag de urgência, sinal de recomendação da IA e tempo decorrido. Um sistema rico de filtros e ordenação permite que auditores organizem sua própria fila por especialização, urgência ou tipo de protocolo. A fila foi projetada para reduzir a fadiga de decisão eliminando ruído e evidenciando sinal.',
         ],
-        images: [{ src: '/cases/arvo/fila-operacional.png', alt: 'Fila operacional com filtros, sinais de prioridade e recomendações de IA' }],
+        images: [{ src: '/cases/arvo/fila-operacional.webp', alt: 'Fila operacional com filtros, sinais de prioridade e recomendações de IA' }],
       },
       {
         number: '07',
@@ -236,7 +237,7 @@ const content: Record<Lang, CaseContent> = {
           'A tela de análise de pedido é o coração do produto. Ela consolida o dossiê completo de um pedido de autorização: perfil e histórico médico do beneficiário, códigos de procedimento, documentos clínicos anexados, contexto do prestador solicitante e classificação regulatória.',
           'Um painel dedicado de insights de IA apresenta a análise da plataforma — contraindicações, alinhamento com protocolos, padrões históricos e flags de risco — como suporte à decisão, não como diretiva. O painel de decisão final oferece quatro caminhos claros ao auditor: aprovar, negar, pendenciar (solicitar mais informações ao prestador) ou encaminhar para junta médica. Cada ação é registrada com contexto para trilhas de auditoria regulatória.',
         ],
-        images: [{ src: '/cases/arvo/tela-de-pedido.png', alt: 'Tela de análise de pedido com painel de insights de IA e controles de decisão' }],
+        images: [{ src: '/cases/arvo/tela-de-pedido.webp', alt: 'Tela de análise de pedido com painel de insights de IA e controles de decisão' }],
       },
       {
         number: '08',
@@ -246,7 +247,7 @@ const content: Record<Lang, CaseContent> = {
           'Uma fonte significativa de atrasos nas autorizações são submissões incompletas ou incorretas por parte dos prestadores. O wizard de submissão foi projetado para resolver isso no upstream — guiando equipes de hospitais e clínicas por um processo estruturado e validado que garante que todos os campos obrigatórios sejam preenchidos antes que o pedido entre na fila de autorização.',
           'O wizard suporta upload de documentos e pré-preenchimento assistido por OCR, reduzindo a entrada manual de dados enquanto apresenta erros de validação em contexto. Ao melhorar a qualidade dos dados no ponto de entrada, o wizard reduz diretamente o volume de pendências necessárias pelos auditores e comprime o tempo total do ciclo de autorização.',
         ],
-        images: [{ src: '/cases/arvo/wizard.png', alt: 'Wizard de submissão de pedido com etapas guiadas e upload de documentos' }],
+        images: [{ src: '/cases/arvo/wizard.webp', alt: 'Wizard de submissão de pedido com etapas guiadas e upload de documentos' }],
       },
     ],
   },
@@ -259,16 +260,18 @@ export default function ArvoCase() {
   const c = content[lang]
 
   return (
-    <main className="bg-canvas text-ink">
-      <CaseHeader lang={lang} toggle={toggle} c={c} />
-      <Hero c={c} />
-      <div className="section-shell">
-        <div className="rule" />
-      </div>
-      <Process c={c} />
-      <Results c={c} />
-      <CaseFooter c={c} />
-    </main>
+    <ErrorBoundary>
+      <main className="bg-canvas text-ink">
+        <CaseHeader lang={lang} toggle={toggle} c={c} />
+        <Hero c={c} />
+        <div className="section-shell">
+          <div className="rule" />
+        </div>
+        <Process c={c} />
+        <Results c={c} />
+        <CaseFooter c={c} />
+      </main>
+    </ErrorBoundary>
   )
 }
 
@@ -397,14 +400,32 @@ function Process({ c }: { c: CaseContent }) {
               <div className="section-shell grid gap-4 sm:grid-cols-2">
                 {step.images.map((img) => (
                   <div key={img.src} className="overflow-hidden rounded-xl border border-ink/[0.08] bg-surface">
-                    <Image src={img.src} alt={img.alt} width={1200} height={800} className="w-full h-auto" quality={90} />
+                    <Image
+                      src={img.src}
+                      alt={img.alt}
+                      width={1200}
+                      height={800}
+                      sizes="(max-width: 640px) calc(100vw - 40px), (max-width: 1280px) calc(50vw - 48px), 580px"
+                      quality={75}
+                      loading="lazy"
+                      className="w-full h-auto"
+                    />
                   </div>
                 ))}
               </div>
             ) : (
               <div className="section-shell">
                 <div className="overflow-hidden rounded-xl border border-ink/[0.08] bg-surface">
-                  <Image src={step.images[0].src} alt={step.images[0].alt} width={1600} height={900} className="w-full h-auto" quality={90} />
+                  <Image
+                    src={step.images[0].src}
+                    alt={step.images[0].alt}
+                    width={1600}
+                    height={900}
+                    sizes="(max-width: 640px) calc(100vw - 40px), (max-width: 1280px) calc(100vw - 64px), 1184px"
+                    quality={75}
+                    loading="lazy"
+                    className="w-full h-auto"
+                  />
                 </div>
               </div>
             )}
